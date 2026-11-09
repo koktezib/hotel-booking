@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Hotel Booking - All" type="CompoundRunConfigurationType">
+    <toRun name="Eureka" type="Application" />
+    <toRun name="Hotel" type="Application" />
+    <toRun name="Booking" type="Application" />
+    <toRun name="Gateway" type="Application" />
+    <method v="2" />
+  </configuration>
+</component>

@@ -1,0 +1,8 @@
+**/target/
+.idea/
+*.iml
+.env
+.run/*
+!.run/*.run.xml
+__pycache__/
+*.log

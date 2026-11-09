@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Gateway" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.example.hotel.gateway.GatewayApplication" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <option name="VM_PARAMETERS" value="-Xmx256m" />
+    <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+    <module name="api-gateway" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

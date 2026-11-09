@@ -1,0 +1,39 @@
+server:
+  port: ${PORT:8080}
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          httpclient:
+            connect-timeout: 2000
+            response-timeout: 30s
+          routes:
+            - id: booking
+              uri: lb://booking-service
+              predicates:
+                - Path=/api/bookings,/api/bookings/**,/api/auth/**,/api/users,/api/users/**,/booking,/booking/**,/bookings,/user,/user/**
+            - id: hotel
+              uri: lb://hotel-service
+              predicates:
+                - Path=/api/hotels,/api/hotels/**,/api/rooms,/api/rooms/**
+security:
+  jwt:
+    secret: ${JWT_SECRET:local-demo-key-change-before-production-0123456789}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+logging:
+  structured:
+    format:
+      console: logstash
